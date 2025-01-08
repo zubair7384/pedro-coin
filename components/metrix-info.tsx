@@ -20,19 +20,19 @@ const MetricsInfo = ({
     <div className="w-64">
       <div className="text-6xl text-white font-bold mb-4">{percentage}%</div>
       <div
-        className="text-xl font-medium mb-2"
+        className="text-xl font-medium mb-0"
         style={{ color: desktop ? "#fff" : titleColor }}
       >
         {title}
       </div>
       <div
-        className="text-2xl font-semibold mb-2"
+        className="text-2xl font-semibold mb-0"
         style={{ color: desktop ? "#fff" : titleColor }}
       >
         {value}
       </div>
       <div
-        className="text-sm opacity-90"
+        className="text-sm opacity-90 mb-4"
         style={{ color: desktop ? "#fff" : titleColor }}
       >
         {description}

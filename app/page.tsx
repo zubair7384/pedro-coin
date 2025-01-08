@@ -4,7 +4,7 @@ import { Nav } from "@/components/nav";
 import Pedronomics from "@/components/pedronomics";
 import Roadmap from "@/components/road-map";
 import TotalSupply from "@/components/total-supply";
-// import { ScrollingBanner } from "@/components/scrolling-banner";
+import { ScrollingBanner } from "@/components/scrolling-banner";
 import "../styles/globals.css";
 import { Button } from "@/components/ui/button";
 import { VerticalMetrics } from "@/components/vertical-metrix";
@@ -25,9 +25,10 @@ export default function Home() {
       <div className=" mx-auto">
         <div className="hero-bg h-[85vh]">
           <Nav />
-          <div className="text-center max-w-4xl mx-auto mt-20 mb-32">
-            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
-              Building the Future of Memes & Tokens with the Awkward Look
+          <div className="text-center max-w-6xl mx-auto mt-20 mb-32">
+            <h1 className="banner-text text-4xl md:text-7xl font-bold text-white mb-6">
+              Building the Future of Memes & Tokens with the <br />
+              <span>Awkward Look</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
               Where humor and innovation unite on the Solana blockchain—join the
@@ -41,7 +42,7 @@ export default function Home() {
         </div>
 
         <div className="relative bg-[#fff] ">
-          {/* <ScrollingBanner /> */}
+          <ScrollingBanner />
 
           <div className="w-[80%] flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 mx-auto">
             <div className="text-center md:text-left max-w-xl">

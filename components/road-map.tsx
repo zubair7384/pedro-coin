@@ -1,3 +1,5 @@
+import Marquee from "react-fast-marquee";
+
 export default function Roadmap() {
   const phases = [
     {
@@ -32,7 +34,7 @@ export default function Roadmap() {
   ];
 
   return (
-    <div className="flex justify-end min-h-screen bg-[#fafafa]  relative mb-10">
+    <div className="flex justify-end min-h-screen bg-[#fafafa]  relative overflow-hidden">
       <div className="w-full">
         {/* Header Text */}
         <h2 className="font-light pt-16 text-[#8B1D1D] max-w-[600px] text-3xl md:text-4xl mx-auto mt-0 my-[6rem]">
@@ -42,12 +44,21 @@ export default function Roadmap() {
 
         {/* Main Content Container */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 relative">
-          {/* Vertical "THE ROAD TO PEDROFICATION" text */}
-          <div className="hidden md:block absolute   left-20 bottom-0 height-[100%]">
-            <div className="rotate-180 whitespace-nowrap [writing-mode:vertical-rl] text-8xl font-bold tracking-tight bg-gradient-to-b from-[#8B8178] to-[#C1A28B] bg-clip-text text-transparent">
+          {/* <Marquee direction="up" speed={30}> */}
+          <div className=" hidden md:block absolute left-[9rem] bottom-0 height-[100%]">
+            <div
+              className="rotate-360 whitespace-nowrap [writing-mode:vertical-rl] text-8xl font-bold tracking-tight bg-clip-text text-transparent"
+              style={{
+                background:
+                  "linear-gradient(to bottom, #ffffff 0%, #c47a49 50%, #ffffff 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               THE ROAD TO PEDROFICATION
             </div>
           </div>
+          {/* </Marquee> */}
 
           {/* Timeline Container */}
           <div className="flex-grow relative">
@@ -58,7 +69,7 @@ export default function Roadmap() {
             <div
               className="roadmap-container space-y-24 flex flex-col items-end w-[70%] float-right "
               style={{
-                padding: "16rem 15rem 16rem 0px",
+                padding: "10rem 15rem 10rem 0px",
               }}
             >
               {phases.map((phase, index) => (

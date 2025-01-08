@@ -2,6 +2,7 @@ import { Twitter, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/pedro-logo.png";
+import Marquee from "react-fast-marquee";
 
 export default function Footer() {
   const navigation = [
@@ -45,8 +46,24 @@ export default function Footer() {
       {/* Background Text Overlay */}
       <div className=" inset-0 overflow-hidden pointer-events-none mb-20">
         <div className=" bottom-32 w-full text-[14vw] leading-none font-bold whitespace-nowrap">
-          <div className="text-[#C1A28B] opacity-90">ere humor mee</div>
-          <div className="text-[#4CAF50] opacity-90">on on the Sola</div>
+          <Marquee gradient={false} speed={30} direction="right">
+            {Array(4)
+              .fill(null)
+              .map((_, index) => (
+                <span key={index} className="text-[#C1A28B] opacity-90 px-4">
+                  ere humor mee
+                </span>
+              ))}
+          </Marquee>
+          <Marquee gradient={false} speed={30}>
+            {Array(4)
+              .fill(null)
+              .map((_, index) => (
+                <span key={index} className="text-[#41CE84] opacity-90 px-4">
+                  on on the Sola
+                </span>
+              ))}
+          </Marquee>
         </div>
       </div>
 

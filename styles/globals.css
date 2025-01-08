@@ -123,11 +123,25 @@ body {
     rgba(65, 206, 132, 1) 100%
   );
 }
+.total-supply-bg {
+  background: linear-gradient(to top, #9999992e 25%, #ffffff 100%);
+}
 .metrix-container {
   background: linear-gradient(to top, #9999992e 0%, #ffffff 100%);
+}
+.total-supply-bg-inner {
+  background: linear-gradient(to top, #9999992e 30%, #ffffff 100%);
+}
+.vertical-text {
+  background: #f0f0f0;
+  background: linear-gradient(to right, #f0f0f0 0%, #d38a59 50%, #f0f0f0 100%);
+  -webkit-text-fill-color: transparent;
 }
 
 .roadmap-container {
   /* background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%, #ffffff 0%); */
   background: linear-gradient(to bottom, #ffffff 0%, #c6c6c6 64%, #ffffff 100%);
+}
+.banner-text {
+  font-size: 5.5rem !important;
 }
