@@ -18,7 +18,7 @@ export function Nav() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center from-green-500 justify-between p-4 bg-transparent">
+    <nav className=" right-0 z-50 flex items-center from-green-500 justify-between p-4 bg-transparent w-4/5 mx-auto pt-8">
       <Link href="/" className="flex items-center">
         <Image
           src={logo}
@@ -42,7 +42,7 @@ export function Nav() {
         ))}
         <Button
           variant="outline"
-          className="bg-white text-black hover:bg-white/90"
+          className="bg-white  hover:text-[#7F1911] rounded-[100px] border-[#7F1911] text-[#7F1911]"
         >
           WHITE PAPER
         </Button>

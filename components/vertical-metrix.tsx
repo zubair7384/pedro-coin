@@ -12,15 +12,15 @@ export function VerticalMetrics({
 
   return (
     <div
-      className="relative w-64 rounded-lg overflow-hidden"
+      className="metrix-container relative w-64 overflow-hidden"
       style={{
         height,
-        background:
-          "linear-gradient(180deg, rgb(167, 230, 192) 0%, rgb(109, 203, 149) 100%)",
       }}
     >
-      <div className="absolute top-0 left-0 w-full p-6 text-white">
-        <div className="text-6xl font-bold mb-4">{percentage}%</div>
+      <div className="absolute top-0 left-0 w-full p-6 text-[#41CE84] md:hidden">
+        <div className="text-6xl font-bold mb-4 text-[#41CE84]">
+          {percentage}%
+        </div>
         {children}
       </div>
     </div>

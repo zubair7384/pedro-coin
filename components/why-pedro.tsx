@@ -7,6 +7,7 @@ export function WhyPedro() {
       title: "TRUST",
       description: "Initial LP tokens are burned to prevent rug pulls.",
       bgColor: "bg-[#C68B59]",
+      color: "#4A1D1D",
       image: null,
     },
     {
@@ -26,11 +27,11 @@ export function WhyPedro() {
 
   return (
     <section className="py-24 px-4 md:px-6 container mx-auto bg-[#fff]">
-      <div className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-24">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A1D1D] mb-6">
           WHY PEDROCOIN?
         </h2>
-        <p className="text-lg md:text-xl text-[#4A1D1D]">
+        <p className="text-lg md:text-xl text-[#C68B59]">
           PedroCoin isn't just another pump.shit coin. It's the quirky,
           community-powered token built on Solana to bring memes and utility
           together for the long haul. 🚀🐒
@@ -55,16 +56,37 @@ export function WhyPedro() {
               />
             )}
             <div className="relative p-8 h-full min-h-[320px] flex flex-col">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mb-4">
-                <span className="text-[#4A1D1D] font-bold text-xl">
+              <div
+                className={`w-10 h-10 rounded-full bg-[${
+                  feature.color || "#fff"
+                }] text-white flex items-center justify-center mb-4`}
+              >
+                <span
+                  className={`font-bold text-xl`}
+                  style={{
+                    color: feature.number === "1" ? "#fff" : "#4A1D1D",
+                  }}
+                >
                   {feature.number}
                 </span>
               </div>
               <div className="mt-auto">
-                <h3 className="text-3xl font-bold text-white mb-3">
+                <h3
+                  className="text-3xl font-bold text-white mb-3"
+                  style={{
+                    color: feature.number !== "1" ? "#fff" : "#4A1D1D",
+                  }}
+                >
                   {feature.title}
                 </h3>
-                <p className="text-white/90 text-lg">{feature.description}</p>
+                <p
+                  style={{
+                    color: feature.number !== "1" ? "#fff" : "#4A1D1D",
+                  }}
+                  className="text-white/90 text-lg"
+                >
+                  {feature.description}
+                </p>
               </div>
             </div>
           </div>

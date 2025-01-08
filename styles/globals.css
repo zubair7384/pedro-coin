@@ -92,3 +92,42 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.hero-bg {
+  background: rgb(34, 197, 94);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 1) 0%,
+    rgba(34, 197, 94, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 1) 0%,
+    rgba(34, 197, 94, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 1) 0%,
+    rgba(34, 197, 94, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c55e",endColorstr="#ffffff",GradientType=1);
+}
+.pedronomics-container {
+  background: linear-gradient(
+    to bottom,
+    rgba(65, 206, 132, 0) 0%,
+    rgba(65, 206, 132, 0.64) 64%,
+    rgba(65, 206, 132, 1) 100%
+  );
+}
+.metrix-container {
+  background: linear-gradient(to top, #9999992e 0%, #ffffff 100%);
+}
+
+.roadmap-container {
+  /* background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%, #ffffff 0%); */
+  background: linear-gradient(to bottom, #ffffff 0%, #c6c6c6 64%, #ffffff 100%);
+}
