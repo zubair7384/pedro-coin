@@ -21,13 +21,14 @@ export default function Home() {
     "https://s3-alpha-sig.figma.com/img/3d71/7fce/044af6f03699e7c1706cc397adf184e7?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jkR-zfPVu~8U2r1Sr9qWFR2L-Azf7auTvkoCOJkFbDsaC7M3wNx1sQHviW0~OcXzVjWLiCd76GYOvR1EF~UbpIRuIwD~EcxYxP71lI39m~kylWBcVlK15jkZDGLeE~gv4n5638YORlnADvgTp2-lk43Dsg8PjaL7aa4tKwNYgfNMvt8rQVn8xBu0cVrtFRUT2llMx~XJXTTmxgIWBQzqQcQUAmxQ1y6xf6DZGZn44sEpAm5JXjjBdaiHByqXtylDJvuP0tlbH8g2D3~iaBgcS736ef9wRJJd-15WngiuxHX6nkjZkjHf5-IVc3P9CsVj9RfbqywJFDoNtnMwlOOAUA__";
 
   return (
-    <main className="min-h-screen bg-gradient-to-b ">
-      <div className=" mx-auto">
+    <main className="main-bg min-h-screen bg-gradient-to-b ">
+      <div className="mx-auto">
         <div className="hero-bg h-[85vh]">
           <Nav />
           <div className="text-center max-w-6xl mx-auto mt-20 mb-32">
             <h1 className="banner-text text-4xl md:text-7xl font-bold text-white mb-6">
-              Building the Future of Memes & Tokens with the <br />
+              Building the Future of Memes & Tokens with the{" "}
+              {isMobile && <br />}
               <span>Awkward Look</span>
             </h1>
             <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
@@ -71,7 +72,7 @@ export default function Home() {
         <WhyPedro />
         <div className="pedronomics-container">
           <Pedronomics />
-          <div className="relative matrics-container flex items-end justify-center gap-[1rem]">
+          <div className="supply-container relative matrics-container flex items-end justify-center gap-[1rem] ">
             <div className="absolute right-0 top-[-5.5rem]">
               {isMobile && <TotalSupply />}
             </div>

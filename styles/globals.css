@@ -92,28 +92,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
 .hero-bg {
-  background: rgb(34, 197, 94);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 1) 0%,
-    rgba(34, 197, 94, 1) 40%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 1) 0%,
-    rgba(34, 197, 94, 1) 40%,
-    rgba(255, 255, 255, 1) 100%
-  );
   background: linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 1) 0%,
-    rgba(34, 197, 94, 1) 40%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c55e",endColorstr="#ffffff",GradientType=1);
+      180deg,
+      rgba(34, 197, 94, 0.632) 0%,
+      rgba(34, 197, 94, 0.79) 40%,
+      rgba(255, 255, 255, 0.984) 100%
+    ),
+    url("/pedro-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .pedronomics-container {
   background: linear-gradient(
@@ -144,4 +133,23 @@ body {
 }
 .banner-text {
   font-size: 5.5rem !important;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 100%;
+  }
+  .nav-container a img {
+    width: 22%;
+  }
+  .supply-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-text {
+    font-size: 2.5rem !important;
+  }
 }

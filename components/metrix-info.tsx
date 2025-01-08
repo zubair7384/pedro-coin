@@ -18,7 +18,7 @@ const MetricsInfo = ({
 }: MetricsInfoProps) => {
   return (
     <div className="w-64">
-      <div className="text-6xl text-white font-bold mb-4">{percentage}%</div>
+      <div className="text-6xl font-bold mb-4">{percentage}</div>
       <div
         className="text-xl font-medium mb-0"
         style={{ color: desktop ? "#fff" : titleColor }}
