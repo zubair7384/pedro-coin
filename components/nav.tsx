@@ -35,6 +35,7 @@ export function Nav() {
           <Link
             key={item.name}
             href={item.href}
+            scroll={true}
             className="text-white hover:text-white/80 transition-colors"
           >
             {item.name}

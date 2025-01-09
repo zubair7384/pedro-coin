@@ -1,4 +1,4 @@
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 
 export default function Roadmap() {
   const phases = [
@@ -34,7 +34,10 @@ export default function Roadmap() {
   ];
 
   return (
-    <div className="flex justify-end min-h-screen bg-[#fafafa]  relative overflow-hidden">
+    <div
+      id="roadmap"
+      className="flex justify-end min-h-screen bg-[#fafafa]  relative overflow-hidden"
+    >
       <div className="w-full">
         {/* Header Text */}
         <h2 className="font-light pt-16 text-[#8B1D1D] max-w-[600px] text-3xl md:text-4xl mx-auto mt-0 my-[6rem]">
@@ -75,7 +78,7 @@ export default function Roadmap() {
               {phases.map((phase, index) => (
                 <div key={index} className="relative w-full text-right ">
                   {/* Timeline Dot */}
-                  <div className="absolute right-0 w-3 h-3 rounded-full bg-[#8B1D1D] translate-x-[2px]" />
+                  <div className="absolute right-0 w-3 h-3 rounded-full bg-[#8B1D1D] translate-x-[2px] translate-y-[20px]" />
 
                   {/* Content */}
                   <div className="pr-24">

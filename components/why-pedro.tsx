@@ -27,11 +27,11 @@ export function WhyPedro() {
 
   return (
     <section className="py-24 px-4 md:px-6 container mx-auto bg-[#fff]">
-      <div className="max-w-4xl mx-auto text-center mb-24">
+      <div className="max-w-3xl mx-auto text-center mb-24">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4A1D1D] mb-6">
           WHY PEDROCOIN?
         </h2>
-        <p className="text-lg md:text-xl text-[#C68B59]">
+        <p className="text-lg md:text-md text-[#7F1911] font-light">
           PedroCoin isn't just another pump.shit coin. It's the quirky,
           community-powered token built on Solana to bring memes and utility
           together for the long haul. 🚀🐒

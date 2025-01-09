@@ -2,18 +2,19 @@ import { Twitter, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/pedro-logo.png";
+import solana from "../public/solana.png";
 import Marquee from "react-fast-marquee";
 
 export default function Footer() {
   const navigation = [
-    { name: "About", href: "#" },
-    { name: "Tokenomics", href: "#" },
-    { name: "Roadmap", href: "#" },
+    { name: "About", href: "#about" },
+    { name: "Tokenomics", href: "#tokenomics" },
+    { name: "Roadmap", href: "#roadmap" },
     { name: "Whitepaper", href: "#" },
   ];
 
   return (
-    <footer className="relative bg-[#440C0A] overflow-hidden">
+    <footer className=" relative bg-[#440C0A] overflow-hidden">
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="text-center mb-0">
@@ -68,24 +69,19 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-[80%] mx-auto">
+        <div className="container mx-auto px-4 py-6 pb-0">
+          <div className="border-b border-white/12 border-[#ffffff97] flex flex-col md:flex-row items-center justify-between gap-4 py-8">
             <div className="flex items-center gap-2">
               <Image
                 src={logo}
                 alt="Pedro Logo"
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 className="rounded-full"
               />
             </div>
 
-            {/* Copyright */}
-            <div className="text-white/60 text-sm">
-              © 2025 PedroCoin. Powered by Solana ⚡ | Meme responsibly. This is
-              not financial advice.
-            </div>
             {/* Navigation */}
             <nav className="flex gap-8">
               {navigation.map((item) => (
@@ -98,6 +94,18 @@ export default function Footer() {
                 </Link>
               ))}
             </nav>
+          </div>
+          {/* Copyright */}
+          <div className="flex justify-center text-[#fff] text-white/60 text-md p-12 text-center">
+            © 2025 PedroCoin. Powered by Solana
+            <Image
+              className="mx-2"
+              width={20}
+              height={15}
+              src={solana}
+              alt="solana"
+            />
+            | Meme responsibly. This is not financial advice.
           </div>
         </div>
       </div>

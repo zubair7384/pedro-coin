@@ -19,7 +19,7 @@ export function ScrollingBanner() {
   );
 
   return (
-    <div className="bg-[#D38A59]  transform rotate-[20deg] scale-110 overflow-hidden whitespace-nowrap h-[64px] flex items-center border-t-2 border-b-2 border-[#7F1911]">
+    <div className="bg-[#D38A59]  transform rotate-[13deg] scale-110 overflow-hidden whitespace-nowrap h-[64px] flex items-center border-t-2 border-b-2 border-[#7F1911]">
       <Marquee gradient={false} speed={20}>
         <MarqueeItem />
         <MarqueeItem />

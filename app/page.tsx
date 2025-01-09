@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="main-bg min-h-screen bg-gradient-to-b ">
-      <div className="mx-auto">
+      <div className="mx-auto" style={{ overflow: "hidden" }}>
         <div className="hero-bg h-[85vh]">
           <Nav />
           <div className="text-center max-w-6xl mx-auto mt-20 mb-32">
@@ -42,15 +42,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative bg-[#fff] ">
+        <div className="relative bg-[#fff]">
           <ScrollingBanner />
 
-          <div className="w-[80%] flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 mx-auto">
-            <div className="text-center md:text-left max-w-xl">
-              <h2 className="text-3xl md:text-5xl font-bold text-[#4A1D1D] mb-6 leading-16">
+          <div
+            id="about"
+            className="w-[80%] flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 mx-auto"
+          >
+            <div className="tale-of-perdro-wrapper text-center md:text-left max-w-xl">
+              <h2 className=" text-3xl md:text-5xl font-bold text-[#4A1D1D] mb-6">
                 THE TALE OF PEDRO WHERE MEMES MEET BLOCKCHAIN
               </h2>
-              <p className="text-[#C68B59] text-lg leading-8">
+              <p className="text-[#7F1911] text-lg leading-8 font-light">
                 PedroCoin isn't just another cryptocurrency—it's a movement!
                 Built on the Solana blockchain, PedroCoin merges the universal
                 language of memes with groundbreaking blockchain technology. Our
@@ -64,16 +67,16 @@ export default function Home() {
                 alt="Pedro Meme"
                 width={500}
                 height={500}
-                className="rounded-full w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
+                className="rounded-full aspect-square w-[300px] md:w-[400px] lg:w-[500px]"
               />
             </div>
           </div>
         </div>
         <WhyPedro />
-        <div className="pedronomics-container">
+        <div id="tokenomics" className="pedronomics-container">
           <Pedronomics />
-          <div className="supply-container relative matrics-container flex items-end justify-center gap-[1rem] ">
-            <div className="absolute right-0 top-[-5.5rem]">
+          <div className="supply-container relative matrics-container flex items-end justify-center gap-[2rem] ">
+            <div className="absolute right-[6rem] top-[-3rem]">
               {isMobile && <TotalSupply />}
             </div>
             <div>
