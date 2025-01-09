@@ -1,6 +1,9 @@
 import Image from "next/image";
+import useIsMobile from "@/hooks/useIsMobile";
 
 export function WhyPedro() {
+  const isMobile = useIsMobile();
+
   const features = [
     {
       number: "1",
@@ -8,7 +11,7 @@ export function WhyPedro() {
       description: "Initial LP tokens are burned to prevent rug pulls.",
       bgColor: "bg-[#C68B59]",
       color: "#4A1D1D",
-      image: null,
+      image: !isMobile ? "/pedro-1.png" : null,
     },
     {
       number: "2",
@@ -26,12 +29,42 @@ export function WhyPedro() {
   ];
 
   return (
-    <section className="py-24 px-4 md:px-6 container mx-auto bg-[#fff]">
-      <div className="max-w-3xl mx-auto text-center mb-24">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#4A1D1D] mb-6">
+    <section
+      className="py-24 px-4 md:px-6 container mx-auto bg-[#fff]"
+      style={
+        {
+          paddingBottom: !isMobile && "1rem",
+        } as any
+      }
+    >
+      <div
+        className="max-w-3xl mx-auto text-center mb-24"
+        style={
+          {
+            padding: !isMobile && "0 1rem",
+          } as any
+        }
+      >
+        <h2
+          className="text-4xl md:text-5xl font-bold text-[#4A1D1D] mb-6"
+          style={
+            {
+              textAlign: !isMobile && "left",
+              lineHeight: !isMobile && 1.3,
+            } as any
+          }
+        >
           WHY PEDROCOIN?
         </h2>
-        <p className="text-lg md:text-md text-[#7F1911] font-light">
+        <p
+          className="text-lg md:text-md text-[#7F1911] font-light"
+          style={
+            {
+              textAlign: !isMobile && "left",
+              lineHeight: !isMobile && 1.3,
+            } as any
+          }
+        >
           PedroCoin isn't just another pump.shit coin. It's the quirky,
           community-powered token built on Solana to bring memes and utility
           together for the long haul. 🚀🐒
@@ -43,8 +76,13 @@ export function WhyPedro() {
           <div
             key={index}
             className={`relative overflow-hidden rounded-[2.5rem] h-[455px] ${
-              feature.bgColor || "bg-[#4A1D1D]"
+              feature.image ? "bg-[#4A1D1D]" : feature.bgColor || "bg-[#4A1D1D]"
             }`}
+            style={
+              {
+                background: !isMobile && "#fff",
+              } as any
+            }
           >
             {feature.image && (
               <Image
@@ -55,16 +93,26 @@ export function WhyPedro() {
                 className="w-full h-auto object-cover absolute inset-0"
               />
             )}
-            <div className="relative p-8 h-full min-h-[320px] flex flex-col">
+            <div
+              className={`relative p-8 h-full min-h-[320px] flex flex-col ${
+                feature.image ? "" : "bg-[#C68B59]"
+              }`}
+            >
               <div
-                className={`w-10 h-10 rounded-full bg-[${
-                  feature.color || "#fff"
-                }] text-white flex items-center justify-center mb-4`}
+                className={`w-10 h-10 rounded-full ${
+                  feature.image
+                    ? "bg-[#fff]"
+                    : `bg-[${feature.color || "#fff"}]`
+                } text-white flex items-center justify-center mb-4`}
               >
                 <span
-                  className={`font-bold text-xl`}
+                  className="font-bold text-xl"
                   style={{
-                    color: feature.number === "1" ? "#fff" : "#4A1D1D",
+                    color: feature.image
+                      ? "#4A1D1D"
+                      : feature.number === "1"
+                      ? "#fff"
+                      : "#4A1D1D",
                   }}
                 >
                   {feature.number}
@@ -72,16 +120,24 @@ export function WhyPedro() {
               </div>
               <div className="mt-auto">
                 <h3
-                  className="text-3xl font-bold text-white mb-3"
+                  className="text-3xl font-bold mb-3"
                   style={{
-                    color: feature.number !== "1" ? "#fff" : "#4A1D1D",
+                    color: feature.image
+                      ? "#fff"
+                      : feature.number !== "1"
+                      ? "#fff"
+                      : "#4A1D1D",
                   }}
                 >
                   {feature.title}
                 </h3>
                 <p
                   style={{
-                    color: feature.number !== "1" ? "#fff" : "#4A1D1D",
+                    color: feature.image
+                      ? "#fff"
+                      : feature.number !== "1"
+                      ? "#fff"
+                      : "#4A1D1D",
                   }}
                   className="text-white/90 text-lg"
                 >

@@ -106,7 +106,6 @@ body {
     url("/pedro-banner.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 .pedronomics-container {
   background: linear-gradient(
@@ -134,7 +133,6 @@ body {
 }
 
 .roadmap-container {
-  /* background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%, #ffffff 0%); */
   background: linear-gradient(to bottom, #ffffff 0%, #c6c6c6 64%, #ffffff 100%);
 }
 .banner-text {
@@ -147,9 +145,32 @@ body {
   line-height: 1.5;
 }
 
+.main-text {
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+}
+
+.roadmap-container {
+  padding: 10rem 15rem 10rem 0px;
+}
+
 /* MEDIA QUERIES */
 
+@media (max-width: 1024px) {
+  .banner-text {
+    font-size: 4.5rem !important;
+  }
+  .roadmap-container {
+    padding: 6rem 4rem 5rem 0px;
+  }
+  .v-line {
+    right: 4.2rem;
+  }
+}
 @media (max-width: 768px) {
+  .hero-bg {
+    height: 66vh;
+  }
   .nav-container {
     width: 100%;
   }
@@ -163,5 +184,32 @@ body {
   }
   .banner-text {
     font-size: 2.5rem !important;
+  }
+  .v-text {
+    left: 2.5rem;
+    top: -5rem;
+  }
+  .roadmap-content {
+    padding-right: 1rem;
+  }
+  .roadmap-container {
+    background: transparent;
+  }
+  .v-text-inner {
+    font-size: 4.5rem;
+  }
+  .footer-marquee-text {
+    margin-bottom: 0;
+  }
+  .footer-marquee-text-inner {
+    font-size: 6rem;
+  }
+  .copy-right-text {
+    display: flex;
+    font-size: 12px;
+  }
+  .solana-img {
+    width: 10px;
+    height: 7px;
   }
 }

@@ -25,9 +25,9 @@ export default function Home() {
       <div className="mx-auto" style={{ overflow: "hidden" }}>
         <div className="hero-bg h-[85vh]">
           <Nav />
-          <div className="text-center max-w-6xl mx-auto mt-20 mb-32">
+          <div className="main-text text-center max-w-6xl mx-auto mt-20 mb-32">
             <h1 className="banner-text text-4xl md:text-7xl font-bold text-white mb-6">
-              Building the Future of Memes & Tokens with the{" "}
+              Building the Future of Memes & Tokens with the
               {isMobile && <br />}
               <span>Awkward Look</span>
             </h1>
@@ -44,16 +44,38 @@ export default function Home() {
 
         <div className="relative bg-[#fff]">
           <ScrollingBanner />
-
           <div
             id="about"
             className="w-[80%] flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 mx-auto"
+            style={
+              {
+                width: !isMobile && "100%",
+                padding: !isMobile && "0 2rem",
+                marginTop: !isMobile && "-2rem",
+              } as any
+            }
           >
             <div className="tale-of-perdro-wrapper text-center md:text-left max-w-xl">
-              <h2 className=" text-3xl md:text-5xl font-bold text-[#4A1D1D] mb-6">
+              <h2
+                className=" text-3xl md:text-5xl font-bold text-[#4A1D1D] mb-6"
+                style={
+                  {
+                    width: !isMobile && "100%",
+                    textAlign: !isMobile && "left",
+                  } as any
+                }
+              >
                 THE TALE OF PEDRO WHERE MEMES MEET BLOCKCHAIN
               </h2>
-              <p className="text-[#7F1911] text-lg leading-8 font-light">
+              <p
+                className="text-[#7F1911] text-lg leading-8 font-light"
+                style={
+                  {
+                    textAlign: !isMobile && "left",
+                    lineHeight: !isMobile && 1.3,
+                  } as any
+                }
+              >
                 PedroCoin isn't just another cryptocurrency—it's a movement!
                 Built on the Solana blockchain, PedroCoin merges the universal
                 language of memes with groundbreaking blockchain technology. Our
@@ -61,7 +83,14 @@ export default function Home() {
                 everyone, from seasoned investors to meme lovers.
               </p>
             </div>
-            <div className="flex justify-center">
+            <div
+              className="flex justify-center"
+              style={
+                {
+                  zIndex: !isMobile && 2,
+                } as any
+              }
+            >
               <Image
                 src={pedro_gif}
                 alt="Pedro Meme"
@@ -75,7 +104,12 @@ export default function Home() {
         <WhyPedro />
         <div id="tokenomics" className="pedronomics-container">
           <Pedronomics />
-          <div className="supply-container relative matrics-container flex items-end justify-center gap-[2rem] ">
+          <div
+            className="supply-container relative matrics-container flex items-end justify-center gap-[2rem]"
+            style={{
+              gap: !isMobile ? 0 : "2rem",
+            }}
+          >
             <div className="absolute right-[6rem] top-[-3rem]">
               {isMobile && <TotalSupply />}
             </div>

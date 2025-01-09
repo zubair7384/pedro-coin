@@ -17,6 +17,14 @@ export function Nav() {
     { name: "Roadmap", href: "#roadmap" },
   ];
 
+  const handleMobileLinkClick = (href: string) => {
+    setIsOpen(false);
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="nav-container right-0 z-50 flex items-center from-green-500 justify-between p-4 bg-transparent w-4/5 mx-auto pt-8">
       <Link href="/" className="flex items-center">
@@ -53,24 +61,28 @@ export function Nav() {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild className="md:hidden">
           <Button variant="ghost" size="icon" className="text-white">
-            <Menu className="h-6 w-6" />
+            <Menu
+              style={{
+                width: "40px",
+                height: "40px",
+              }}
+            />
           </Button>
         </SheetTrigger>
         <SheetContent className="bg-[#4A1D1D] border-none">
-          <div className="flex flex-col gap-4 mt-8">
+          <div className="flex flex-col items-center gap-4 mt-24">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleMobileLinkClick(item.href)}
                 className="text-white hover:text-white/80 transition-colors text-lg"
-                onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
             <Button
               variant="outline"
-              className="bg-white text-black hover:bg-white/90 mt-4"
+              className="bg-white  hover:text-[#7F1911] rounded-[100px] border-[#7F1911] text-[#7F1911]"
             >
               WHITE PAPER
             </Button>

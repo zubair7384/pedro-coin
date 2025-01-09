@@ -4,8 +4,11 @@ import Link from "next/link";
 import logo from "../public/pedro-logo.png";
 import solana from "../public/solana.png";
 import Marquee from "react-fast-marquee";
+import useIsMobile from "@/hooks/useIsMobile";
 
 export default function Footer() {
+  const isMobile = useIsMobile();
+
   const navigation = [
     { name: "About", href: "#about" },
     { name: "Tokenomics", href: "#tokenomics" },
@@ -45,8 +48,8 @@ export default function Footer() {
       </div>
 
       {/* Background Text Overlay */}
-      <div className=" inset-0 overflow-hidden pointer-events-none mb-20">
-        <div className=" bottom-32 w-full text-[14vw] leading-none font-bold whitespace-nowrap">
+      <div className="footer-marquee-text inset-0 overflow-hidden pointer-events-none mb-20">
+        <div className="footer-marquee-text-inner bottom-32 w-full text-[14vw] leading-none font-bold whitespace-nowrap">
           <Marquee gradient={false} speed={30} direction="right">
             {Array(4)
               .fill(null)
@@ -96,15 +99,24 @@ export default function Footer() {
             </nav>
           </div>
           {/* Copyright */}
-          <div className="flex justify-center text-[#fff] text-white/60 text-md p-12 text-center">
+          <div
+            className="copy-right-text flex justify-center text-[#fff] text-white/60 text-md p-12 text-center"
+            style={
+              {
+                padding: !isMobile && "1rem 0",
+              } as any
+            }
+          >
             © 2025 PedroCoin. Powered by Solana
-            <Image
-              className="mx-2"
-              width={20}
-              height={15}
-              src={solana}
-              alt="solana"
-            />
+            {isMobile && (
+              <Image
+                className="solana-img mx-2"
+                width={20}
+                height={15}
+                src={solana}
+                alt="solana"
+              />
+            )}
             | Meme responsibly. This is not financial advice.
           </div>
         </div>
